@@ -58,7 +58,7 @@ p {
 }
 .intro-text h1 {
   font-size: 3rem;
-  margin: 1rem;
+  margin: 1rem 0;
 }
 .intro-text p {
   font-size: 1.3rem;
@@ -208,9 +208,11 @@ p {
   margin: 2rem 0 1rem 0;
 }
 .specifications dd > ul {
-  color: #191970;
   padding: 0;
-  font-size: 0.9rem;
+}
+.specifications dd > ul > li {
+  color: #191970;
+  font-size: 0.8rem;
 }
 
 /* ORDER */
@@ -331,6 +333,7 @@ p {
 */
 
 @media screen and (min-width: 650px) {
+  /* INTRO */
   .intro-image {
     padding-top: 3rem;
   }
@@ -367,7 +370,7 @@ p {
   }
   .feature > div li {
     font-size: 1rem;
-    margin-bottom: 0.5rem;
+    line-height: 1.5rem;
   }
   .feature > div > div {
     text-align-last: left;
@@ -416,5 +419,62 @@ p {
   .footer > div > .social {
     width: 50%;
     justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  /* INTRO */
+  .intro {
+    flex-direction: row;
+    align-items: center;
+  }
+  .intro > div {
+    width: 50%;
+  }
+  .intro-text {
+    position: initial;
+  }
+  .intro-text h1 {
+    font-size: 3.5rem;
+  }
+
+  /* FEATURES */
+  .feature {
+    height: 30rem;
+    border-radius: 10px;
+    margin: 2rem;
+  }
+  .features h2 {
+    font-size: 3rem;
+  }
+  .feature > div {
+    height: 30rem;
+  }
+  .feature > div h3 {
+    font-size: 2.5rem;
+  }
+  .feature > div p {
+    font-size: 1.5rem;
+  }
+  .feature > div ul {
+    margin-left: 1rem;
+  }
+  .feature > div li {
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+  }
+  .feature > div button {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+    margin-left: 2rem;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  /* .feature {
+    max-width: 80rem;
+  } */
+  .feature > div img {
+    width: initial;
   }
 }
