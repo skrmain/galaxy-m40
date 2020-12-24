@@ -1,0 +1,17 @@
+{
+  "name": "galaxy-m-40",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel serve watch public/index.html",
+    "build": "parcel build public/index.html"
+  },
+  "keywords": [],
+  "author": "Sachin Kumar Rajput <skr571999@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.30.0"
+  }
+}

@@ -18,18 +18,16 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.navbar a {
-  color: #ffffff;
-  font-size: 2rem;
-  display: block;
-  transition: 0.2s ease-in;
-}
-
-.navbar a:hover {
-  color: #9cb5ff;
-  transform: scale(1.02);
+  a {
+    color: #ffffff;
+    font-size: 2rem;
+    display: block;
+    transition: 0.2s ease-in;
+    &:hover {
+      color: #9cb5ff;
+      transform: scale(1.02);
+    }
+  }
 }
 
 /* INTRO SECTION */
@@ -39,52 +37,48 @@ a {
   flex-direction: column;
   text-align: center;
   height: 85vh;
-}
+  .intro-image {
+    padding-top: 1rem;
+    animation: mainImage 10s linear 0s infinite both;
+  }
+  .intro-text {
+    position: relative;
+    top: -8rem;
+    background-color: #fff;
+    h1,
+    p {
+      color: #191970;
+    }
+    h1 {
+      font-size: 3rem;
+      margin: 1rem 0;
+    }
+    p {
+      font-size: 1.3rem;
+    }
+    button {
+      margin-top: 2rem;
+      outline: none;
+      border: none;
+      font-size: 1rem;
+      background-color: #191970;
+      color: #fff;
+      padding: 1rem 3rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.2s ease-in;
+      &:hover {
+        background-color: #fff;
+        color: #191970;
+        box-shadow: 0 0 5px #191970;
+      }
 
-.intro-image {
-  padding-top: 1rem;
-  animation: mainImage 10s linear 0s infinite both;
-}
-
-.intro-text {
-  position: relative;
-  top: -8rem;
-  background-color: #fff;
-}
-
-.intro-text h1,
-p {
-  color: #191970;
-}
-.intro-text h1 {
-  font-size: 3rem;
-  margin: 1rem 0;
-}
-.intro-text p {
-  font-size: 1.3rem;
-}
-.intro-text button {
-  margin-top: 2rem;
-  outline: none;
-  border: none;
-  font-size: 1rem;
-  background-color: #191970;
-  color: #fff;
-  padding: 1rem 3rem;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.2s ease-in;
-}
-
-.intro-text button:hover {
-  background-color: #fff;
-  color: #191970;
-  box-shadow: 0 0 5px #191970;
-}
-
-.intro-text button:active {
-  background-color: #cddaff;
+      &:active {
+        background-color: #cddaff;
+      }
+    }
+  }
 }
 
 @keyframes mainImage {
@@ -325,12 +319,12 @@ p {
 }
 
 /* 
-- #191970 : Primary
-- #cddaff : Primary Light
-- #12214f : Secondary
-- #9cb5ff : Secondary Light
-- #ffffff : White 
-*/
+  - #191970 : Primary
+  - #cddaff : Primary Light
+  - #12214f : Secondary
+  - #9cb5ff : Secondary Light
+  - #ffffff : White 
+  */
 
 @media screen and (min-width: 650px) {
   /* INTRO */
@@ -472,8 +466,8 @@ p {
 
 @media screen and (min-width: 1050px) {
   /* .feature {
-    max-width: 80rem;
-  } */
+      max-width: 80rem;
+    } */
   .feature > div img {
     width: initial;
   }
