@@ -109,15 +109,22 @@ a {
     font-size: 2.5rem;
     text-align: center;
   }
-
+  .feature-list {
+    max-width: 100em;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
   .feature {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #fff;
-    margin: 1rem 0.5rem;
-    border-radius: 5px;
+    margin: 1rem auto;
+    border-radius: 10px;
     height: 14rem;
+    width: 95%;
+    box-shadow: 0 0 4px #83838377;
     > div {
       height: 14rem;
       overflow: hidden;
@@ -131,6 +138,9 @@ a {
       &:nth-child(2) {
         width: 60%;
       }
+      > div {
+        text-align: center;
+      }
       h3 {
         font-size: 1.5rem;
         color: #191970;
@@ -139,10 +149,13 @@ a {
       p {
         font-size: 1rem;
         color: #12214f;
-        margin: 0.5rem 0;
+        margin: 1rem 0 0.5rem 0;
       }
       img {
-        width: 90%;
+        height: 80%;
+      }
+      ul {
+        margin-top: 0;
       }
       li {
         color: #12214f;
@@ -168,9 +181,6 @@ a {
           background-color: #cddaff;
         }
       }
-      > div {
-        text-align: center;
-      }
     }
   }
 }
@@ -180,26 +190,30 @@ a {
 .specifications {
   background-color: #fff;
   padding: 1rem 0;
-}
-.specifications h2 {
-  color: #191970;
-  font-size: 2.5rem;
-  text-align: center;
-}
-.specifications > div {
-  padding: 0 2rem 1rem 2rem;
-}
-.specifications dt {
-  color: #12214f;
-  font-weight: bold;
-  margin: 2rem 0 1rem 0;
-}
-.specifications dd > ul {
-  padding: 0;
-}
-.specifications dd > ul > li {
-  color: #191970;
-  font-size: 0.8rem;
+  max-width: 100em;
+  margin: 0 auto;
+  h2 {
+    color: #191970;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  > div {
+    padding: 0 2rem 1rem 2rem;
+  }
+  dt {
+    color: #12214f;
+    font-weight: bold;
+    margin: 2rem 0 1rem 0;
+  }
+  dd {
+    ul {
+      padding: 0;
+      li {
+        color: #191970;
+        font-size: 0.8rem;
+      }
+    }
+  }
 }
 
 /* ORDER */
@@ -207,48 +221,50 @@ a {
   height: 30rem;
   background-color: #9cb5ff;
   padding: 2rem 0;
-}
-.order h2 {
-  color: #191970;
-  font-size: 2.5rem;
-  text-align: center;
-}
-.order > div {
-  display: flex;
-  height: 12rem;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-}
-.order > div > div > button {
-  display: flex;
-  align-items: center;
-  height: 4rem;
-  margin: 0.5rem 0;
-}
-.order > div button img {
-  width: 2.2rem;
-  margin-right: 1rem;
-}
-.order > div button {
-  min-width: 15rem;
-  outline: none;
-  border: none;
-  font-size: 1.5rem;
-  color: #191970;
-  background-color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.2s ease-in;
-}
-.order > div button:hover {
-  box-shadow: 0 0 5px #191970;
-  transform: scale(1.05);
-}
-.order > div button:active {
-  background-color: #cddaff;
+  h2 {
+    color: #191970;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  > div {
+    display: flex;
+    height: 12rem;
+    margin: 0 auto;
+    max-width: 100em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    > div > button {
+      display: flex;
+      align-items: center;
+      height: 4rem;
+      margin: 0.5rem 0;
+    }
+    button img {
+      width: 2.2rem;
+      margin-right: 1rem;
+    }
+    button {
+      min-width: 15rem;
+      outline: none;
+      border: none;
+      font-size: 1.5rem;
+      color: #191970;
+      background-color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.2s ease-in;
+      &:hover {
+        box-shadow: 0 0 5px #191970;
+        transform: scale(1.05);
+      }
+      &:active {
+        background-color: #cddaff;
+      }
+    }
+  }
 }
 
 /* FOOTER */
@@ -258,6 +274,8 @@ a {
   justify-content: center;
   align-items: flex-start;
   padding: 1rem 0;
+  max-width: 100em;
+  margin: 0 auto;
 }
 .footer > div {
   width: 50%;
@@ -333,65 +351,33 @@ a {
   /* FEATURES */
   .features {
     .feature {
-      height: 20rem;
-      margin: 1rem;
-      > div {
-        height: 20rem;
-        &:nth-child(1) {
-          width: 50%;
-        }
-        &:nth-child(2) {
-          width: 50%;
-          justify-content: space-around;
-          padding-left: 2rem;
-          padding-bottom: 2rem;
-        }
-        h3 {
-          font-size: 2rem;
-          margin: 1rem 0;
-        }
-        p {
-          font-size: 1.3rem;
-        }
-        ul {
-          margin: 0;
-        }
-        li {
-          font-size: 1rem;
-          line-height: 1.5rem;
-        }
-        > div {
-          text-align-last: left;
-        }
-        button {
-          font-size: 1rem;
-          padding: 0.5rem 1rem;
-        }
-      }
+      width: 80%;
     }
   }
 
   /* SPECIFICATIONS */
-  .specifications > div {
-    padding: 0 3rem;
-  }
-  .specifications dt {
-    font-size: 1.5rem;
-  }
-  .specifications dd > ul {
-    font-size: 1rem;
-    padding-left: 1rem;
-    line-height: 1.5rem;
+  .specifications {
+    > div {
+      padding: 0 3rem;
+    }
+    dt {
+      font-size: 1.5rem;
+    }
+    dd > ul {
+      font-size: 1rem;
+      padding-left: 1rem;
+      line-height: 1.5rem;
+    }
   }
 
   /* ORDERS */
   .order {
     height: 25rem;
-  }
-  .order > div {
-    height: 15rem;
-    flex-direction: row;
-    flex-wrap: wrap;
+    > div {
+      height: 15rem;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
   }
 
   /* FOOTER */
@@ -431,40 +417,16 @@ a {
 
   /* FEATURES */
   .features {
-    h2 {
-      font-size: 3rem;
-    }
     .feature {
-      height: 30rem;
-      border-radius: 10px;
-      margin: 2rem;
-      > div {
-        height: 30rem;
-        h3 {
-          font-size: 2.5rem;
-        }
-        p {
-          font-size: 1.5rem;
-        }
-        ul {
-          margin-left: 1rem;
-        }
-        li {
-          font-size: 1.3rem;
-          line-height: 2.5rem;
-        }
-        button {
-          font-size: 1.2rem;
-          padding: 0.8rem 1.5rem;
-          margin-left: 2rem;
-        }
-      }
+      width: 45%;
     }
   }
 }
 
 @media screen and (min-width: 1050px) {
-  .feature > div img {
-    width: initial;
+  .features {
+    .feature {
+      width: 40%;
+    }
   }
 }
