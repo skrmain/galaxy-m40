@@ -22,10 +22,13 @@ a {
     color: #ffffff;
     font-size: 2rem;
     display: block;
-    transition: 0.2s ease-in;
-    &:hover {
-      color: #9cb5ff;
-      transform: scale(1.02);
+    b {
+      transition: 0.2s ease-in;
+    }
+    &:hover b {
+      margin-left: 0.5rem;
+      // color: #9cb5ff;
+      // transform: scale(1.02);
     }
   }
 }
@@ -101,85 +104,75 @@ a {
 .features {
   background-color: #cddaff;
   padding: 1rem 0;
-}
+  h2 {
+    color: #191970;
+    font-size: 2.5rem;
+    text-align: center;
+  }
 
-.features h2 {
-  color: #191970;
-  font-size: 2.5rem;
-  text-align: center;
-}
-
-.feature {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #fff;
-  margin: 1rem 0.5rem;
-  border-radius: 5px;
-  height: 14rem;
-}
-
-.feature > div:nth-child(1) {
-  width: 40%;
-  align-items: center;
-}
-.feature > div:nth-child(2) {
-  width: 60%;
-}
-.feature > div {
-  height: 14rem;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.feature > div h3 {
-  font-size: 1.5rem;
-  color: #191970;
-  margin: 0;
-}
-
-.feature > div p {
-  font-size: 1rem;
-  color: #12214f;
-  margin: 0.5rem 0;
-}
-
-.feature > div img {
-  width: 90%;
-}
-
-.feature > div li {
-  color: #12214f;
-  font-size: 0.9rem;
-}
-
-.feature > div button {
-  outline: none;
-  border: none;
-  font-size: 0.8rem;
-  background-color: #191970;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.2s ease-in;
-}
-
-.feature > div > div {
-  text-align: center;
-}
-
-.feature > div button:hover {
-  background-color: #fff;
-  color: #191970;
-  box-shadow: 0 0 5px #191970;
-}
-
-.feature > div button:active {
-  background-color: #cddaff;
+  .feature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    margin: 1rem 0.5rem;
+    border-radius: 5px;
+    height: 14rem;
+    > div {
+      height: 14rem;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &:nth-child(1) {
+        width: 40%;
+        align-items: center;
+      }
+      &:nth-child(2) {
+        width: 60%;
+      }
+      h3 {
+        font-size: 1.5rem;
+        color: #191970;
+        margin: 0;
+      }
+      p {
+        font-size: 1rem;
+        color: #12214f;
+        margin: 0.5rem 0;
+      }
+      img {
+        width: 90%;
+      }
+      li {
+        color: #12214f;
+        font-size: 0.9rem;
+      }
+      button {
+        outline: none;
+        border: none;
+        font-size: 0.8rem;
+        background-color: #191970;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.2s ease-in;
+        &:hover {
+          background-color: #fff;
+          color: #191970;
+          box-shadow: 0 0 5px #191970;
+        }
+        &:active {
+          background-color: #cddaff;
+        }
+      }
+      > div {
+        text-align: center;
+      }
+    }
+  }
 }
 
 /* SPECIFICATIONS */
@@ -328,50 +321,54 @@ a {
 
 @media screen and (min-width: 650px) {
   /* INTRO */
-  .intro-image {
-    padding-top: 3rem;
-  }
-  .intro-text {
-    top: -6rem;
+  .intro {
+    .intro-image {
+      padding-top: 3rem;
+    }
+    .intro-text {
+      top: -6rem;
+    }
   }
 
   /* FEATURES */
-  .feature {
-    height: 20rem;
-    margin: 1rem;
-  }
-  .feature > div:nth-child(1) {
-    width: 50%;
-  }
-  .feature > div:nth-child(2) {
-    width: 50%;
-    justify-content: space-around;
-    padding-left: 2rem;
-    padding-bottom: 2rem;
-  }
-  .feature > div {
-    height: 20rem;
-  }
-  .feature > div h3 {
-    font-size: 2rem;
-    margin: 1rem 0;
-  }
-  .feature > div p {
-    font-size: 1.3rem;
-  }
-  .feature > div ul {
-    margin: 0;
-  }
-  .feature > div li {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-  .feature > div > div {
-    text-align-last: left;
-  }
-  .feature > div button {
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
+  .features {
+    .feature {
+      height: 20rem;
+      margin: 1rem;
+      > div {
+        height: 20rem;
+        &:nth-child(1) {
+          width: 50%;
+        }
+        &:nth-child(2) {
+          width: 50%;
+          justify-content: space-around;
+          padding-left: 2rem;
+          padding-bottom: 2rem;
+        }
+        h3 {
+          font-size: 2rem;
+          margin: 1rem 0;
+        }
+        p {
+          font-size: 1.3rem;
+        }
+        ul {
+          margin: 0;
+        }
+        li {
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+        > div {
+          text-align-last: left;
+        }
+        button {
+          font-size: 1rem;
+          padding: 0.5rem 1rem;
+        }
+      }
+    }
   }
 
   /* SPECIFICATIONS */
@@ -421,53 +418,52 @@ a {
   .intro {
     flex-direction: row;
     align-items: center;
-  }
-  .intro > div {
-    width: 50%;
-  }
-  .intro-text {
-    position: initial;
-  }
-  .intro-text h1 {
-    font-size: 3.5rem;
+    > div {
+      width: 50%;
+    }
+    .intro-text {
+      position: initial;
+      h1 {
+        font-size: 3.5rem;
+      }
+    }
   }
 
   /* FEATURES */
-  .feature {
-    height: 30rem;
-    border-radius: 10px;
-    margin: 2rem;
-  }
-  .features h2 {
-    font-size: 3rem;
-  }
-  .feature > div {
-    height: 30rem;
-  }
-  .feature > div h3 {
-    font-size: 2.5rem;
-  }
-  .feature > div p {
-    font-size: 1.5rem;
-  }
-  .feature > div ul {
-    margin-left: 1rem;
-  }
-  .feature > div li {
-    font-size: 1.3rem;
-    line-height: 2.5rem;
-  }
-  .feature > div button {
-    font-size: 1.2rem;
-    padding: 0.8rem 1.5rem;
-    margin-left: 2rem;
+  .features {
+    h2 {
+      font-size: 3rem;
+    }
+    .feature {
+      height: 30rem;
+      border-radius: 10px;
+      margin: 2rem;
+      > div {
+        height: 30rem;
+        h3 {
+          font-size: 2.5rem;
+        }
+        p {
+          font-size: 1.5rem;
+        }
+        ul {
+          margin-left: 1rem;
+        }
+        li {
+          font-size: 1.3rem;
+          line-height: 2.5rem;
+        }
+        button {
+          font-size: 1.2rem;
+          padding: 0.8rem 1.5rem;
+          margin-left: 2rem;
+        }
+      }
+    }
   }
 }
 
 @media screen and (min-width: 1050px) {
-  /* .feature {
-      max-width: 80rem;
-    } */
   .feature > div img {
     width: initial;
   }
