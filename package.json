@@ -1,10 +1,9 @@
 {
-  "name": "galaxy-m-40",
+  "name": "galaxy-ui",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A Dummy Mobile Responsive Web Page.",
   "scripts": {
-    "dev": "parcel serve watch public/index.html",
+    "dev": "parcel public/index.html",
     "build": "parcel build public/index.html"
   },
   "keywords": [],
