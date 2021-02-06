@@ -1,9 +1,13 @@
-# Galaxy M40 - UI
+# Galaxy UI
+
+A Dummy Mobile Responsive Web Page.
 
 ## Usage
 
 ```sh
 npm run dev
+
+npm run build
 ```
 
 ## Branches Information
