@@ -1,3 +1,32 @@
+$primary: #191970;
+$primary-light: #cddaff;
+$secondary: #12214f;
+$secondary-light: #9cb5ff;
+
+%default-button {
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  background-color: $primary;
+  color: white;
+  padding: 1rem 3rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease-in;
+  &:hover {
+    background-color: white;
+    color: $primary;
+    box-shadow: 0 1px 4px $primary;
+    transform: scale(1.01);
+  }
+  &:active {
+    background-color: $primary-light;
+    color: $primary;
+    transform: scale(0.95);
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -13,22 +42,20 @@ a {
 
 /* NAVBAR */
 .navbar {
-  background-color: #191970;
   height: 15vh;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  background-color: $primary;
   a {
-    color: #ffffff;
-    font-size: 2rem;
     display: block;
+    font-size: 2rem;
+    color: white;
     b {
       transition: 0.2s ease-in;
     }
     &:hover b {
       margin-left: 0.5rem;
-      // color: #9cb5ff;
-      // transform: scale(1.02);
     }
   }
 }
@@ -36,21 +63,21 @@ a {
 /* INTRO SECTION */
 
 .intro {
+  height: 85vh;
   display: flex;
   flex-direction: column;
   text-align: center;
-  height: 85vh;
   .intro-image {
     padding-top: 1rem;
-    animation: mainImage 10s linear 0s infinite both;
+    animation: intro-image 10s linear 0s infinite both;
   }
   .intro-text {
     position: relative;
     top: -8rem;
-    background-color: #fff;
+    background-color: white;
     h1,
     p {
-      color: #191970;
+      color: $primary;
     }
     h1 {
       font-size: 3rem;
@@ -60,31 +87,12 @@ a {
       font-size: 1.3rem;
     }
     button {
-      margin-top: 2rem;
-      outline: none;
-      border: none;
-      font-size: 1rem;
-      background-color: #191970;
-      color: #fff;
-      padding: 1rem 3rem;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: 0.2s ease-in;
-      &:hover {
-        background-color: #fff;
-        color: #191970;
-        box-shadow: 0 0 5px #191970;
-      }
-
-      &:active {
-        background-color: #cddaff;
-      }
+      @extend %default-button;
     }
   }
 }
 
-@keyframes mainImage {
+@keyframes intro-image {
   0% {
     transform: scale(0.9);
   }
@@ -102,10 +110,10 @@ a {
 /* FEATURES */
 
 .features {
-  background-color: #cddaff;
+  background-color: $primary-light;
   padding: 1rem 0;
   h2 {
-    color: #191970;
+    color: $primary;
     font-size: 2.5rem;
     text-align: center;
   }
@@ -119,7 +127,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #fff;
+    background-color: white;
     margin: 1rem auto;
     border-radius: 10px;
     height: 14rem;
@@ -143,12 +151,12 @@ a {
       }
       h3 {
         font-size: 1.5rem;
-        color: #191970;
+        color: $primary;
         margin: 0;
       }
       p {
         font-size: 1rem;
-        color: #12214f;
+        color: $secondary;
         margin: 1rem 0 0.5rem 0;
       }
       img {
@@ -158,28 +166,13 @@ a {
         margin-top: 0;
       }
       li {
-        color: #12214f;
+        color: $primary;
         font-size: 0.9rem;
       }
       button {
-        outline: none;
-        border: none;
+        @extend %default-button;
         font-size: 0.8rem;
-        background-color: #191970;
-        color: #fff;
         padding: 0.5rem 1rem;
-        border-radius: 5px;
-        cursor: pointer;
-        font-weight: bold;
-        transition: 0.2s ease-in;
-        &:hover {
-          background-color: #fff;
-          color: #191970;
-          box-shadow: 0 0 5px #191970;
-        }
-        &:active {
-          background-color: #cddaff;
-        }
       }
     }
   }
@@ -188,12 +181,12 @@ a {
 /* SPECIFICATIONS */
 
 .specifications {
-  background-color: #fff;
+  background-color: white;
   padding: 1rem 0;
   max-width: 100em;
   margin: 0 auto;
   h2 {
-    color: #191970;
+    color: $primary;
     font-size: 2.5rem;
     text-align: center;
   }
@@ -201,7 +194,7 @@ a {
     padding: 0 2rem 1rem 2rem;
   }
   dt {
-    color: #12214f;
+    color: $secondary;
     font-weight: bold;
     margin: 2rem 0 1rem 0;
   }
@@ -209,7 +202,7 @@ a {
     ul {
       padding: 0;
       li {
-        color: #191970;
+        color: $primary;
         font-size: 0.8rem;
       }
     }
@@ -219,10 +212,10 @@ a {
 /* ORDER */
 .order {
   height: 30rem;
-  background-color: #9cb5ff;
+  background-color: $primary-light;
   padding: 2rem 0;
   h2 {
-    color: #191970;
+    color: $primary;
     font-size: 2.5rem;
     text-align: center;
   }
@@ -245,23 +238,14 @@ a {
       margin-right: 1rem;
     }
     button {
+      @extend %default-button;
       min-width: 15rem;
-      outline: none;
-      border: none;
       font-size: 1.5rem;
       color: #191970;
       background-color: #fff;
       padding: 0.5rem 1rem;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: 0.2s ease-in;
-      &:hover {
-        box-shadow: 0 0 5px #191970;
-        transform: scale(1.05);
-      }
       &:active {
-        background-color: #cddaff;
+        background-color: white;
       }
     }
   }
@@ -276,40 +260,40 @@ a {
   padding: 1rem 0;
   max-width: 100em;
   margin: 0 auto;
-}
-.footer > div {
-  width: 50%;
-  padding: 1rem;
-}
-.footer > div h4 {
-  font-size: 1.5rem;
-  color: #12214f;
-  margin: 0;
-}
-.footer .samsung > a {
-  color: #12214f;
-  font-size: 1.2rem;
-}
-.footer .social {
-  display: flex;
-  height: 5rem;
-  align-items: center;
-}
-.footer > div > div img {
-  width: 1.8rem;
-}
-.footer > div button {
-  outline: none;
-  border: none;
-  background-color: #fff;
-  cursor: pointer;
-  transition: 0.2s ease-in;
-}
-.footer > div button:hover {
-  transform: scale(1.1);
-}
-.footer > div button:active {
-  transform: scale(1);
+  > div {
+    width: 50%;
+    padding: 1rem;
+    h4 {
+      font-size: 1.5rem;
+      color: #12214f;
+      margin: 0;
+    }
+    > div img {
+      width: 1.8rem;
+    }
+    button {
+      outline: none;
+      border: none;
+      background-color: #fff;
+      cursor: pointer;
+      transition: 0.2s ease-in;
+      &:hover {
+        transform: scale(1.1);
+      }
+      &:active {
+        transform: scale(1);
+      }
+    }
+  }
+  .samsung > a {
+    color: #12214f;
+    font-size: 1.2rem;
+  }
+  .social {
+    display: flex;
+    height: 5rem;
+    align-items: center;
+  }
 }
 
 /* CREDIT */
@@ -319,23 +303,13 @@ a {
   padding: 1.5rem 0;
   color: #fff;
   text-align: center;
+  a {
+    color: #9cb5ff;
+    &:hover {
+      font-weight: bold;
+    }
+  }
 }
-
-.credit a {
-  color: #9cb5ff;
-}
-
-.credit a:hover {
-  font-weight: bold;
-}
-
-/* 
-  - #191970 : Primary
-  - #cddaff : Primary Light
-  - #12214f : Secondary
-  - #9cb5ff : Secondary Light
-  - #ffffff : White 
-  */
 
 @media screen and (min-width: 650px) {
   /* INTRO */
