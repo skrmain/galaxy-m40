@@ -9,7 +9,3 @@ npm start
 
 npm run build
 ```
-
-## Branches Information
-
-- `main` --> For Deployment
