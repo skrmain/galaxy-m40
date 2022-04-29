@@ -1,6 +1,6 @@
 # Galaxy UI
 
-A Dummy Mobile Responsive Web Page.
+A Sample Single page Mobile Responsive Webpage.
 
 ## Usage
 
