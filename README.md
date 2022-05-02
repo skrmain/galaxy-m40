@@ -2,7 +2,7 @@
 
 A Sample Single page Mobile Responsive Webpage.
 
-## Usage
+## Notes
 
 ```sh
 npm start

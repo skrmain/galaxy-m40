@@ -1,16 +1,16 @@
 {
   "name": "galaxy-ui",
   "version": "1.0.0",
-  "description": "A Dummy Mobile Responsive Web Page.",
+  "description": "",
   "scripts": {
     "start": "parcel public/index.html",
     "build": "parcel build public/index.html"
   },
   "keywords": [],
-  "author": "Sachin Kumar Rajput <skr571999@gmail.com>",
+  "author": "",
   "license": "MIT",
   "devDependencies": {
-    "parcel-bundler": "^1.12.4",
-    "sass": "^1.30.0"
+    "@parcel/transformer-sass": "^2.5.0",
+    "parcel": "^2.5.0"
   }
 }
