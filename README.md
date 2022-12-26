@@ -1,8 +1,7 @@
-# galaxy-m40
+# Single Page Websites
 
-## Notes
+## galaxy-m40
 
-```sh
-npm start
-npm run build
-```
+- https://galaxy-ui.netlify.app/
+
+## [Responsive Glass Sidebar using CSS & JavaScript](https://youtu.be/hAnv1NEE7j8)
